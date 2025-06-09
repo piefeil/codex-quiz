@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projetos - Projeto Integrador</title>
+  <link rel="stylesheet" href="styles/projetos.css"/>
+  <link rel="shortcut icon" href="assets/images/www.png" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <a href="https://unifagoc.edu.br/">
+      <img src="assets/images/Uni.png" alt="Logo da Unifagoc" id="unifagoc" />
+    </a>
+    <h1 id="titulo">Projeto Integrador</h1>
+    <div class="espaco-vazio"></div>
+  </header>
+
+  <nav class="grade">
+    <a href="home.html"><div>Home</div></a>
+    <a href="projetos.html"><div>Projetos</div></a>
+    <a href="integrantes.html"><div>Integrantes</div></a>
+    <a href="quiz.html"><div id="pa">Quiz</div></a>
+  </nav>
+
+  <h2 id="explicacao">Conheça os projetos desenvolvidos pelas turmas</h2>
+
+  <main>
+    <section class="proj">
+      <div class="card">
+        <a href="odontologia.html">
+          <img src="assets/images/odontologia.jpeg" alt="Odontologia" />
+        </a>
+        <h3>Odontologia</h3>
+        <p>O curso de Odontologia da UNIFAGOC oferece uma formação sólida em saúde bucal, unindo prática clínica com teoria moderna, focando em prevenção, ética e bem-estar do paciente.</p>
+      </div>
+
+      <div class="card">
+        <a href="psicologia.html">
+          <img src="assets/images/psicologia.jpeg" alt="Psicologia" />
+        </a>
+        <h3>Psicologia</h3>
+        <p>Com abordagem humanista e científica, a Psicologia forma profissionais prontos para atuar na saúde mental, educação, empresas e áreas sociais, com escuta ativa e responsabilidade.</p>
+      </div>
+
+      <div class="card">
+        <a href="computação.html">
+          <img src="assets/images/computação.jpeg" alt="Computação" />
+        </a>
+        <h3>Computação</h3>
+        <p>Voltado à inovação e tecnologia, o curso de Computação desenvolve especialistas em software, redes, IA e segurança digital, com foco em soluções práticas para o mercado.</p>
+      </div>
+
+      <div class="card">
+        <a href="pedagogia.html">
+          <img src="assets/images/pedagogia.jpeg" alt="Pedagogia" />
+        </a>
+        <h3>Pedagogia</h3>
+        <p>Pedagogia forma educadores preparados para transformar a educação infantil e fundamental com sensibilidade, criatividade e compromisso com a aprendizagem inclusiva.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    UNIFAGOC 2025
+  </footer>
+
+  <button id="btnTopo" title="Voltar ao topo">⬆</button>
+
+  <script>
+    const btnTopo = document.getElementById('btnTopo');
+    window.addEventListener('scroll', () => {
+      btnTopo.classList.toggle('show', window.scrollY > 100);
+    });
+    btnTopo.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>

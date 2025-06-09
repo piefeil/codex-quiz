@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto Integrador</title>
+    <link rel="stylesheet" href="styles/home.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/images/www.png" type="image/x-icon">
+  </head>
+
+<div class="sidebar">
+  <h3>Links Rápidos</h3>
+  <ul>
+    <li><a href="#explicacao">Sobre o Projeto</a></li>
+    <li><a href="projetos.html">Projetos</a></li>
+    <li><a href="participantes.html">Participantes</a></li>
+    <li><a href="quiz.html">Quiz</a></li>
+    
+    <li><a href="https://unifagoc.edu.br/" target="_blank">UNIFAGOC</a></li>
+  </ul>
+</div>
+
+<div class="sidebar left-sidebar">
+  <h3>Sobre a Unifagoc</h3>
+  <p>
+    A Unifagoc é referência em ensino de qualidade, promovendo inovação e inclusão.  
+    Aqui, cada estudante tem espaço para crescer, aprender e transformar o futuro.
+  </p>
+  <p>
+    Com professores dedicados e infraestrutura moderna, a Unifagoc impulsiona seu sucesso acadêmico e profissional.
+  </p>
+</div>
+
+<button id="btnTopo" title="Voltar ao topo">⬆</button>
+
+  <body>
+    <header>
+      <a href="https://unifagoc.edu.br/">
+        <img src="assets/images/uni.png" alt="Logo" id="unifagoc" />
+      </a>
+      <h1 id="titulo">Projeto Integrador</h1>
+      <div class="espaco-vazio"></div>
+    </header>
+
+    <nav class="grade">
+      <a href="home.html"><div>Home</div></a>
+      <a href="projetos.html"><div>Projetos</div></a>
+      <a href="integrantes.html"><div>Integrantes</div></a>
+      <a href="quiz.html"><div>Quiz</div></a>
+    </nav>
+
+    <h1 id="explicacao">O que é o Projeto Integrador?</h1>
+
+<main>
+  <section>
+    <p id="texto">
+      <img src="assets/images/imagemIntegrantes.png" width="350px" alt="imagem projeto" id="imagem" />
+      O <strong>Projeto Integrador</strong> é uma iniciativa acadêmica essencial que visa aplicar, na prática, os conhecimentos adquiridos durante o curso. Ele promove o trabalho em equipe, a criatividade, a inovação e a resolução de problemas reais. Os alunos são desafiados a desenvolver soluções baseadas em demandas da sociedade, empresas ou da própria instituição.
+
+      <br><br>
+
+      No UNIFAGOC, o Projeto Integrador proporciona aos estudantes uma vivência mais próxima do mercado de trabalho. Através de metodologias ativas, eles constroem soluções tecnológicas, sociais e ambientais, sempre com o acompanhamento de professores orientadores.
+
+      <br><br>
+
+      Além de desenvolver habilidades técnicas, o projeto estimula a comunicação, liderança, responsabilidade social e ética profissional. A cada semestre, novas temáticas são propostas, com foco em áreas multidisciplinares e colaborativas.
+    </p>
+  </section>
+
+  <section>
+    <h2 style="margin-bottom: 15px; color: #2e3e38;">Objetivos do Projeto Integrador</h2>
+    <ul style="list-style: inside; font-size: 18px; line-height: 1.8;">
+      <li>Promover a interdisciplinaridade entre os conteúdos vistos em sala.</li>
+      <li>Estimular a prática de pesquisa e inovação.</li>
+      <li>Desenvolver competências profissionais e sociais.</li>
+      <li>Proporcionar uma experiência real de resolução de problemas.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 style="margin-bottom: 15px; color: #2e3e38;">Como funciona na prática?</h2>
+    <p style="font-size: 18px; line-height: 1.8;">
+      Os alunos são divididos em grupos e, com o auxílio de um professor-orientador, definem um tema ou problema a ser explorado. A partir disso, começam a pesquisar, planejar e executar a proposta, documentando todas as etapas. Ao final do semestre, os resultados são apresentados em uma mostra acadêmica para a comunidade.
+    </p>
+  </section>
+
+  <section>
+    <h2 style="margin-bottom: 15px; color: #2e3e38;">Benefícios para os alunos</h2>
+    <p style="font-size: 18px; line-height: 1.8;">
+      Participar de um Projeto Integrador é uma excelente oportunidade de destacar-se academicamente, construir um portfólio prático, fortalecer o trabalho em equipe e colocar os conhecimentos adquiridos em ação. Essa vivência prepara os alunos para os desafios reais do mercado de trabalho.
+    </p>
+  </section>
+</main>
+
+    <footer>UNIFAGOC <span id="ano"></span></footer>
+
+    <script>
+      function toggleTexto() {
+        const texto = document.getElementById('texto');
+        const btn = document.getElementById('toggleBtn');
+        if (texto.style.display === 'none') {
+          texto.style.display = 'block';
+          btn.innerText = 'Ocultar texto';
+        } else {
+          texto.style.display = 'none';
+          btn.innerText = 'Mostrar texto';
+        }
+      }
+
+      document.getElementById('ano').textContent = new Date().getFullYear();
+
+      const btnTopo = document.getElementById('btnTopo');
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+          btnTopo.classList.add('show');
+        } else {
+          btnTopo.classList.remove('show');
+        }
+      });
+
+      btnTopo.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+
+    </script>
+  </body>
+</html>
