@@ -37,17 +37,6 @@ Este site foi criado especialmente para **crianças**, com uma linguagem simples
 
 ---
 
-## 🧑‍💻 Equipe - Grupo Codex
-
-- **[Nome 1]** – Desenvolvimento Front-end  
-- **[Nome 2]** – Lógica JavaScript  
-- **[Nome 3]** – Design e acessibilidade infantil  
-- **[Nome 4]** – Documentação e testes  
-
-> *(Substituir pelos nomes reais do grupo)*
-
----
-
 ## 🏫 Sobre a UNIFAGOC
 
 A **UNIFAGOC** (Centro Universitário Governador Ozanam Coelho) promove o aprendizado prático por meio de projetos interdisciplinares. Este projeto faz parte dessa iniciativa, unindo estudantes de diferentes cursos em uma proposta colaborativa e voltada para a comunidade.
