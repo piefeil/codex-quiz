@@ -85,31 +85,6 @@ style.innerHTML = `
 `;
 document.head.appendChild(style);
 
-// Explicações para respostas do quiz (exemplo para computação)
-const explanations = {
-  computacao: [
-    "Software é o conjunto de programas e instruções executados pelo computador.",
-    "HD é o dispositivo tradicional para armazenar dados permanentemente.",
-    "Navegador é o programa usado para acessar páginas na internet.",
-    "Login é o processo de acessar um sistema com usuário e senha.",
-    "Vírus de computador é um programa malicioso que pode danificar arquivos.",
-    "O sistema operacional gerencia todos os recursos do computador.",
-    "Backup é uma cópia de segurança dos dados.",
-    "PDF é um formato de documento portátil, usado para textos e imagens."
-  ]
-};
-
-// Mostra explicação após resposta
-const oldShowFeedback = window.showFeedback;
-window.showFeedback = function() {
-  if (typeof oldShowFeedback === 'function') oldShowFeedback();
-  const tipo = window.quizTitle && window.quizTitle.toLowerCase().includes('computação') ? 'computacao' : null;
-  if (tipo && typeof current !== 'undefined' && explanations[tipo] && explanations[tipo][current]) {
-    document.getElementById('explanation').textContent = explanations[tipo][current];
-  } else {
-    document.getElementById('explanation').textContent = '';
-  }
-};
   </script>
 </body>
 </html>
