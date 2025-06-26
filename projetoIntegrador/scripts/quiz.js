@@ -131,6 +131,46 @@ const quizzes = {
           "Premiar os melhores alunos"
         ],
         answer: 1
+      },
+      {
+        text: "O que são metodologias ativas?",
+        options: [
+          "Técnicas de ensino tradicionais",
+          "Estratégias que colocam o aluno como protagonista do aprendizado",
+          "Aulas expositivas sem participação",
+          "Métodos de avaliação rígidos"
+        ],
+        answer: 1
+      },
+      {
+        text: "O que é educação inclusiva?",
+        options: [
+          "Educação apenas para alunos com deficiência",
+          "Educação que exclui alunos com dificuldades",
+          "Educação que valoriza a diversidade e garante acesso a todos",
+          "Ensino domiciliar obrigatório"
+        ],
+        answer: 2
+      },
+      {
+        text: "Quem propôs a teoria do desenvolvimento cognitivo?",
+        options: [
+          "Lev Vygotsky",
+          "Jean Piaget",
+          "Maria Montessori",
+          "Paulo Freire"
+        ],
+        answer: 1
+      },
+      {
+        text: "O que é mediação pedagógica?",
+        options: [
+          "Apenas transmitir conteúdo",
+          "Apoiar e facilitar a aprendizagem do aluno",
+          "Aplicar provas",
+          "Repetir exercícios"
+        ],
+        answer: 1
       }
     ],
     psicologia: [
@@ -163,36 +203,126 @@ const quizzes = {
           "Memória seletiva"
         ],
         answer: 1
-      }
-    ],
-    computacao: [
-      {
-        text: "O que significa a sigla CPU?",
-        options: [
-          "Central de Processamento Único",
-          "Central de Processamento Universal",
-          "Unidade Central de Processamento",
-          "Unidade de Controle de Processos"
-        ],
-        answer: 2
       },
       {
-        text: "Qual linguagem é conhecida por ser a base da web?",
+        text: "O que é reforço positivo?",
         options: [
-          "Python",
-          "JavaScript",
-          "C++",
-          "Java"
+          "Uma punição para comportamentos indesejados",
+          "A apresentação de um estímulo agradável após um comportamento",
+          "Ignorar um comportamento",
+          "A retirada de um estímulo desagradável"
         ],
         answer: 1
       },
       {
-        text: "O que é um algoritmo?",
+        text: "Qual abordagem enfatiza o potencial humano e o livre-arbítrio?",
         options: [
+          "Psicanálise",
+          "Behaviorismo",
+          "Humanismo",
+          "Cognitivismo"
+        ],
+        answer: 2
+      },
+      {
+        text: "O que é transtorno de ansiedade generalizada?",
+        options: [
+          "Medo intenso de lugares fechados",
+          "Ansiedade persistente e excessiva sem motivo específico",
+          "Fobia de animais",
+          "Tristeza profunda e prolongada"
+        ],
+        answer: 1
+      },
+      {
+        text: "Quem desenvolveu a teoria das etapas do desenvolvimento psicossocial?",
+        options: [
+          "Jean Piaget",
+          "Sigmund Freud",
+          "Erik Erikson",
+          "Carl Rogers"
+        ],
+        answer: 2
+      }
+    ],
+    computacao: [
+      {
+        text: "O que é um software?",
+        options: [
+          "A parte física do computador",
+          "Um programa ou conjunto de instruções que o computador executa",
+          "Um tipo de cabo",
+          "A tela do computador"
+        ],
+        answer: 1
+      },
+      {
+        text: "Qual destes dispositivos é usado para armazenar dados permanentemente?",
+        options: [
+          "Memória RAM",
+          "Processador",
+          "HD (Disco Rígido)",
+          "Placa de vídeo"
+        ],
+        answer: 2
+      },
+      {
+        text: "O que é um navegador de internet?",
+        options: [
+          "Um programa para acessar páginas e sites na web",
+          "Um antivírus",
+          "Um editor de texto",
+          "Um tipo de hardware"
+        ],
+        answer: 0
+      },
+      {
+        text: "O que significa o termo 'login'?",
+        options: [
+          "Desligar o computador",
+          "Acessar um sistema usando usuário e senha",
+          "Salvar um arquivo",
+          "Atualizar a página"
+        ],
+        answer: 1
+      },
+      {
+        text: "O que é um vírus de computador?",
+        options: [
+          "Um erro de digitação",
+          "Um programa malicioso que pode danificar arquivos e sistemas",
           "Um tipo de hardware",
-          "Uma sequência de passos para resolver um problema",
-          "Um erro de programação",
-          "Um sistema operacional"
+          "Uma atualização do sistema"
+        ],
+        answer: 1
+      },
+      {
+        text: "Para que serve o sistema operacional?",
+        options: [
+          "Apenas para jogos",
+          "Controlar e gerenciar todos os recursos do computador",
+          "Aumentar o brilho da tela",
+          "Imprimir documentos"
+        ],
+        answer: 1
+      },
+      {
+        text: "O que é um backup?",
+        options: [
+          "Uma falha no computador",
+          "Uma cópia de segurança dos dados",
+          "Um tipo de vírus",
+          "Um programa de edição de fotos"
+        ],
+        answer: 1
+      },
+      {
+        text: "O que é um arquivo PDF?",
+        options: [
+          "Um tipo de vídeo",
+          "Um formato de documento portátil, usado para textos e imagens",
+          "Um programa de planilhas",
+          "Um site de busca"
         ],
         answer: 1
       }
