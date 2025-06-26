@@ -3,9 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Quiz de Exemplo</title>
-
+  <meta name="description" content="Quiz interativo sobre Odontologia, Pedagogia, Psicologia e Ciência da Computação do Projeto Integrador UNIFAGOC.">
+  <meta name="keywords" content="quiz, ciência da computação, odontologia, pedagogia, psicologia, UNIFAGOC, projeto integrador, perguntas, respostas">
+  <meta name="author" content="UNIFAGOC">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/quiz.css">
   <link rel="shortcut icon" href="assets/images/www.png" type="image/x-icon">
+  <!-- Otimização: pré-carregar CSS -->
+  <link rel="preload" href="styles/quiz.css" as="style">
 </head>
 <body>
 
@@ -27,10 +32,10 @@
   <div id="startScreen" class="start-screen">
     <div class="start-title">Escolha o tipo de quiz</div>
     <div class="quiz-options">
-      <button class="quiz-option-btn" onclick="startQuiz('odontologia')">Odontologia</button>
-      <button class="quiz-option-btn" onclick="startQuiz('pedagogia')">Pedagogia</button>
-      <button class="quiz-option-btn" onclick="startQuiz('psicologia')">Psicologia</button>
-      <button class="quiz-option-btn" onclick="startQuiz('computacao')">Ciência da Computação</button>
+      <button class="quiz-option-btn" onclick="startQuiz('odontologia')" aria-label="Quiz de Odontologia">Odontologia</button>
+      <button class="quiz-option-btn" onclick="startQuiz('pedagogia')" aria-label="Quiz de Pedagogia">Pedagogia</button>
+      <button class="quiz-option-btn" onclick="startQuiz('psicologia')" aria-label="Quiz de Psicologia">Psicologia</button>
+      <button class="quiz-option-btn" onclick="startQuiz('computacao')" aria-label="Quiz de Ciência da Computação">Ciência da Computação</button>
     </div>
   </div>
 
@@ -41,6 +46,7 @@
     <div class="options-list" id="optionsList"></div>
     <button class="check-btn" id="checkBtn" disabled>Verificar</button>
     <div id="feedback"></div>
+    <div id="explanation" style="margin: 10px 0; color: #2e3e38; font-size: 1em;"></div>
     <div class="nav-btns">
       <button class="back-btn" id="backBtn" disabled>Voltar</button>
       <button class="next-btn" id="nextBtn" disabled>Próxima</button>
@@ -52,6 +58,7 @@
         box-shadow: none; letter-spacing: 0.5px;"
         onmouseover="this.style.color='#fff';this.style.background='#23272f';"
         onmouseout="this.style.color='#bbb';this.style.background='none';"
+        aria-label="Voltar à seleção de quiz"
       >
         ← Voltar à seleção de quiz
       </button>
@@ -61,5 +68,48 @@
   <footer>UNIFAGOC 2025</footer>
 
   <script src="scripts/quiz.js"></script>
+  <script>
+// Feedback visual nos botões de opção
+const style = document.createElement('style');
+style.innerHTML = `
+  .option-btn:hover, .quiz-option-btn:hover {
+    background: #e0f7fa;
+    color: #1976d2;
+    box-shadow: 0 2px 8px #2196f355;
+    outline: 2px solid #2196f3;
+  }
+  .option-btn:focus, .quiz-option-btn:focus {
+    outline: 3px solid #43cea2;
+    background: #f1f8e9;
+  }
+`;
+document.head.appendChild(style);
+
+// Explicações para respostas do quiz (exemplo para computação)
+const explanations = {
+  computacao: [
+    "Software é o conjunto de programas e instruções executados pelo computador.",
+    "HD é o dispositivo tradicional para armazenar dados permanentemente.",
+    "Navegador é o programa usado para acessar páginas na internet.",
+    "Login é o processo de acessar um sistema com usuário e senha.",
+    "Vírus de computador é um programa malicioso que pode danificar arquivos.",
+    "O sistema operacional gerencia todos os recursos do computador.",
+    "Backup é uma cópia de segurança dos dados.",
+    "PDF é um formato de documento portátil, usado para textos e imagens."
+  ]
+};
+
+// Mostra explicação após resposta
+const oldShowFeedback = window.showFeedback;
+window.showFeedback = function() {
+  if (typeof oldShowFeedback === 'function') oldShowFeedback();
+  const tipo = window.quizTitle && window.quizTitle.toLowerCase().includes('computação') ? 'computacao' : null;
+  if (tipo && typeof current !== 'undefined' && explanations[tipo] && explanations[tipo][current]) {
+    document.getElementById('explanation').textContent = explanations[tipo][current];
+  } else {
+    document.getElementById('explanation').textContent = '';
+  }
+};
+  </script>
 </body>
 </html>
